@@ -1,0 +1,6 @@
+numpy
+pandas
+django==5.0.4
+pillow
+python-decouple
+python-dotenv
