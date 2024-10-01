@@ -22,7 +22,7 @@ This project is a movie recommendation system built with Django. It utilizes the
 
 ### 1. Clone the Repository:
 ```bash
-git clone https://github.com/username/movie-recommendation.git
+git clone https://github.com/Samilincoln/Movie_Recommendation_Project.git
 cd movie-recommendation
 ```
 
