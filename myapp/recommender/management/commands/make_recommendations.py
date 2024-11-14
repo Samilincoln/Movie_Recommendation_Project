@@ -51,6 +51,7 @@ class Command(BaseCommand):
         if max_similarity > THRESHOLD:
             will_recommend = True
             print(f"Find a movie recommendation: {unwatched_movie.original_title}")
+            break
 
         unwatched_movie.recommended = will_recommend
         unwatched_movie.save()
