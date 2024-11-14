@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies by Rating</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Movies by Rating</h1>
+
+        <!-- Toggle link to filter recommended movies -->
+        {% if show_recommended %}
+            <a href="?recommended=false">Show All Movies</a>
+        {% else %}
+            <a href="?recommended=true">Show Recommended Movies Only</a>
+        {% endif %}
+
+        <div class="container">
+            <div class="card-columns">
+                {% for movie in movie_list %}
+                <div class="col-auto mb-3">
+                    <div class="card">
+                        <li class="movie-item">
+                            <img class="card-img-left" 
+                                    src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" 
+                                    width="320" height="480">
+                            <h3 class="card-title">{{movie.original_title}}</h3>
+                            <p class="movie-rating">Rating: {{ movie.vote_average }}</p>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+                <p>No movies available.</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
